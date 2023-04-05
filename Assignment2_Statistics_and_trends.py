@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr  5 18:56:07 2023
-
-@author: yaminiperi
-"""
-
-# -*- coding: utf-8 -*-
-"""
 Created on Wed Apr  5 14:45:44 2023
 
 @author: yaminiperi
@@ -118,34 +111,8 @@ print()
 # Plot data for all countries
 df_countries = df[::-1]
 
-"""
-#Create a new figure with two subplots
-fig, axs = plt.subplots(2, 1, figsize=(20,12))
 
-#Plot population growth on the first subplot
-axs[0].plot(df_countries['Year'], df_countries['Population growth (annual %)'])
-axs[0].set_title('Population growth')
-axs[0].set_ylabel('Population growth (annual %)')
-
-#Plot electric power consumption on the second subplot
-axs[1].plot(df_countries['Year'], df_countries['Electric power consumption (kWh per capita)'])
-axs[1].set_title('Electric power consumption')
-axs[1].set_ylabel('Electric power consumption (kWh per capita)')
-
-# Set the x-axis label
-plt.xlabel('Year')
-
-# Add country labels to the legend
-plt.legend(df_countries['Country'], loc='upper left')
-
-# Show the plot
-plt.show()
-
-"""
-
-
-
-#Create a scatter plot of CO2 emissions versus electric power consumption for all countries
+#Create a scatter plot of Population growth (annual %)versus electric power consumption for all countries
 plt.scatter(df_countries['Electric power consumption (kWh per capita)'], df_countries['Population growth (annual %)'], c=df_countries['GDP (current US$)'], cmap='coolwarm', alpha=0.8, label='Countries')
 plt.xlabel('Electric power consumption (kWh per capita)')
 plt.ylabel('Population growth (annual %)')
